@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Books</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <section>
-        <h1>Browse</h1>
+        <h3>Browse</h3>
         <p>Categories:</p>
         <ul>
-            <li><a href="./browse/fantasy">Fantasy</a></li>
-            <li><a href="./browse/sciencefiction">Science Fiction</a></li>
-            <li><a href="./browse/sports">Sports</a></li>
+            {% for category in categories %}
+            <li><a href="{{ url_for('category', name = category) }}">{{ category }}</a></li>
+            {% endfor%}
         </ul>
     </section>
-</body>
-</html>
+{% endblock %}

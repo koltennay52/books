@@ -1,35 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoodReads</title>
-</head>
-<body>
-    <header>
-       <h1>goodreads</h1>
-    </header>
+{% extends "base.html" %}
 
-    <section>
+{% block content%}
+        
+    <section>   
         <div>
-            <h1 style ="text-align: center;">Meet Your Next Favorite Book.</h1>
+            <h1>Meet Your Next Favorite Book.</h1>
         </div>
     </section>
 
 
-    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+    <div>
         <section>
-            <h3>Deciding what to read next?  <a href="./browse">Browse Categories</a></h3>
+            <h4>Deciding what to read next?  <a href="./browse">Browse Categories</a></h4>
         </section>
     
         <section>
-            <h3>What are your friends reading? </h3>
+            <h4>What are your friends reading? </h4>
         </section>
     
     </div>
     
     <section>
-        <h3 style="text-align: center;">Are you an author or a publisher?</h3>
+        <h4>Are you an author or a publisher?</h4>
     </section>
-</body>
-</html>
+
+{% endblock%}
