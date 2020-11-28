@@ -9,9 +9,9 @@
 <h4>New Releases:</h4>
 
 <ul>
-    {% for book in category.books %}
+    {% for book in books %}
 
-    <li><a href="{{ url_for('book', category =  category.name, id = (loop.index - 1))}}">{{ book.title }}</a></li>
+    <li><a href="{{ url_for('book', book = book.title)}}">{{ book.title }}</a></li>
 
     {% endfor %}
 </ul>

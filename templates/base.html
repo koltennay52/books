@@ -12,10 +12,13 @@
 
    <ul class="navbar-nav">
        <li class="navbar-item">
-           <a href="./">Home</a>
+           <a href="/">Home</a>
        </li>
        <li class="navbar-item">
-        <a href="./browse">Browse</a>
+        <a href="{{ url_for('browse')}}">Browse</a>
+       </li>
+       <li class="navbar-item">
+        <a href="/admin">Admin</a>
        </li>
    </ul>
 
